@@ -1,0 +1,392 @@
+/* GLOBAL */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+html,body{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    font-size: 65%;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+section{
+    padding: 4rem 9%;
+    margin-top: 1rem;
+}
+
+a{
+    text-decoration: none;
+    color: var(--text-color);
+    cursor: pointer;
+    display: inline-block;
+}
+
+:root{
+    --main-color: #ff702a;
+    --text-color:#FFF;
+    --bg-color:#1e1c2a;
+    --light-color:#feeee7;
+}
+
+.btn{
+    background-color: var(--main-color);
+    border-radius: 0.5rem;
+    border: none;
+    outline: none;
+    padding: 1rem 2rem;
+    font-size: 1.3rem;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+*::selection{
+    background-color: var(--main-color);
+    color: #FFF;
+}
+
+@media screen and (max-width:728px) {
+    html,body{
+        font-size: 55%;
+    }
+
+}
+
+@media screen  and (max-width:480px) {
+    *{
+        cursor: none;
+    }
+
+    html,body{
+        font-size: 50%;
+    }
+}
+
+
+
+.heading .title{
+    font-size: 3.7rem;
+    color: var(--main-color);
+    font-weight: 800;
+}
+
+.heading .sub-title{
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+/* HEADER */
+
+header{
+    padding: 2rem 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--bg-color);
+}
+
+header .title{
+    font-size: 4.5rem;
+    color: coral;
+    font-weight: 900;
+}
+
+header nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    font-size: 1.4rem;
+}
+
+header nav .item:hover{
+    color: var(--main-color);
+}
+
+@media screen and (max-width:728px) {
+    header nav {
+        display: none;
+    }
+}
+
+/* HOME */
+
+.home{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 10rem;
+}
+
+.home .content, .home .image{
+    flex: 1 1 50%;
+}
+
+.home .content h1{
+    font-size: 4rem;
+    color: var(--main-color);
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+}
+
+.home .content h3{
+    font-size: 2.8rem;
+    margin-bottom: 3rem;
+}
+
+.home .content .image{
+
+}
+
+.home .image .img{
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+@media screen and (max-width:728px) {
+    
+}
+
+@media screen  and (max-width:500px) {
+
+    .home {
+        gap: 2rem;
+    }
+    .home .image{
+        order: -1;
+    }
+}
+
+/* ABOUT */
+
+.about{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.about .content{
+    flex: 1 1 50%;
+    min-width: 25rem;
+}
+
+.about .image{
+    flex: 0 1 40%;
+}
+.about .image .img{
+    width: 80%;
+}
+
+.about .content h1{
+    font-size: 4rem;
+    font-weight: 800;
+    color: var(--main-color);
+    margin-bottom: 1rem;
+}
+
+.about .content h2{
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.about .content p{
+    font-size: 1.5rem;
+    font-weight: 200;
+    margin-bottom: 3rem;
+    line-height: 2;
+}
+
+@media screen and (max-width:728px) {
+
+}
+
+@media screen  and (max-width:500px) {
+    .about .image{
+        flex-basis: 100%;
+    }
+}
+
+
+/* MENU */
+.menu{
+    text-align: center;
+}
+
+.menu .menu-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2.3rem;
+    margin-top: 3.9rem;
+}
+
+.menu .menu-container .item{
+    flex: 1;
+    background-color: #feeee7;
+    padding: 1rem 3rem;
+    border-radius: 0.5rem;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    position: relative;
+}
+
+.menu .menu-container .item .img{
+    height: auto;
+    object-fit: contain;
+    width: 80%;
+}
+
+.menu .menu-container .item h3{
+    font-size: 2.5rem;
+    color: var(--bg-color);
+    margin-top: 2rem;
+}
+
+.menu .menu-container .item p{
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: var(--bg-color);
+    margin-top: 1rem;
+}
+
+.menu .menu-container .item .price{
+    font-size: 1.3rem;
+    font-weight: 900;
+    color: var(--main-color);
+    margin-top: 1rem;
+}
+
+.menu .menu-container .item .icon{
+    font-size: 2.5rem;
+    color: var(--main-color);
+    position: absolute;
+    right: 1.5%;
+    top: 1.5%;
+}
+
+/* SERVICE */
+
+.service{
+    text-align: center;
+}
+
+.service .service-container{
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    margin-top: 3.9rem;
+    flex-wrap: wrap;
+}
+
+.service .service-container .box{
+    flex: 1;
+
+}
+
+.service .service-container .box .img{
+    width: 100%;
+    max-width: 10rem;
+}
+
+.service .service-container .box h3{
+    color: var(--main-color);
+    font-size: 1.8rem;
+    margin: 1rem 0 1.2rem;
+}
+
+.service .service-container .box p{
+    font-size: 1.2rem;
+    line-height: 2;
+}
+
+/* CONTACT */
+.contact{
+    width: 100%;
+    background-color: var(--light-color);
+    text-align: center;
+    padding: 8rem 9%;
+    margin-top: 3.9rem;
+}
+
+.contact h1{
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--bg-color);
+}
+
+.contact .btn{
+    margin-top: 2rem;
+}
+
+@media screen and (max-width:728px) {
+    
+}
+
+@media screen and (max-width:500px) {
+    .service .service-container .box{
+        flex-basis: 100%;
+    
+    } 
+}
+
+/* Footer */
+
+footer{
+    background-color: var(--bg-color);
+    padding: 10rem 9%;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+footer .box{
+    flex: 1;
+}
+
+footer .box h3{
+    font-size: 1.5rem;
+    position: relative;
+}
+
+footer .box h3::after{
+    content: '';
+    position: absolute;
+    bottom: -0.8rem;
+    left: 0;
+    width: 5rem;
+    height: 0.5rem;
+    background-color: var(--main-color);
+}
+
+footer .box  .links-container{
+    margin-top: 2rem;
+}
+
+footer .box  .social-links{
+    display: flex;
+    gap: 1.5rem;
+}
+
+footer .box  .links-container .link{
+    font-size: 1.2rem;
+    color: #999;
+    font-weight: 300;
+    margin-top: 0.5rem;
+}
+
+footer .box  .links-container .social-i{
+    font-size: 3rem;
+    color: var(--main-color);
+    font-weight: 300;
+}
+
